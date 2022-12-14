@@ -1,0 +1,14 @@
+id;İsim;Soyisim;Eşi;AnneAdı;BabaAdı;KanGrubu;Meslek;MedeniHali;KızlıkSoyismi;Cinsiyet
+1;Emin;Kaya;Sena Kaya;Ayşe;Mehmet;0(-);Marangoz;Evli;;Erkek
+2;Sena;Kaya;Emin Kaya;Hatice;Ali;A(-);Ev Hanımı;Evli;Çetin;Kadın
+3;Nazlı;Demir;Uğur Demir;Sena;Emin;A(-);Ev Hanımı;Evli;Kaya;Kadın
+4;Mehmet;Kaya;Zeynep  Kılıç;Sena;Emin;0(-);Marangoz;Evli;;Erkek
+5;Mustafa;Kaya;;Elif;Sena;Emin;0(-);Marangoz;Evli;;Erkek
+6;Defne;Çelik;Ahmet Çelik;Nazlı;Uğur;AB(+);Mühendis;Evli;Demir;Kadın
+7;Ömer;Demir;;Eda;Nazlı;Uğur;A(+);Doktor;Evli;;Erkek
+8;Emin;Kaya;;Zeynep;Mehmet;0(+);Marangoz;Bekar;;Erkek
+9;Hatice;Kaya;;Zeynep;Mehmet;A(+);Öğrenci;Bekar;;Kadın
+10;Emre;Kaya;;Zeynep;Mehmet;0(+);Öğrenci;Bekar;;Erkek
+11;Alper;Kaya;;Elif;Mustafa;0(-);Öğrenci;Bekar;;Erkek
+12;İrem;Çelik;;Defne;Ahmet;A(+);Öğrenci;Bekar;;Kadın
+13;Ali;Demir;;Eda;Ömer;0(+);;Bekar;;Erkek
