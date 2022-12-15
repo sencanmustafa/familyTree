@@ -9,7 +9,7 @@ namespace Entities;
 
 public class Person
 {
-    public string? id { get; set; }
+    public int id { get; set; }
 
     public string? İsim { get; set; }
 
@@ -32,13 +32,16 @@ public class Person
     public string? KızlıkSoyismi { get; set; }
 
     public string? Cinsiyet { get; set; }
+    public bool? uvey { get; set; }
 
     public List<Person>? childList { get; set; }
 
     public Person? Anne { get; set; }
     public Person? Baba { get; set; }
+    public Person? Spouse { get; set; }   
     public Person()
     {
         this.childList = new List<Person>();
+        
     }
 }
