@@ -63,35 +63,90 @@ namespace ConsoleUI
                 Person selectedPerson = personList[i];
                 for (int j = 0; j < personList.Count(); j++)
                 {
+                    Person selectedPerson2 = personList[j];
                     if (
-                        selectedPerson.id != personList[j].id && 
-                        selectedPerson.Soyisim == personList[j].Soyisim && 
-                        selectedPerson.Eşi == personList[j].İsim + " " + personList[j].Soyisim
+                        selectedPerson.id != selectedPerson2.id && 
+                        selectedPerson.Soyisim == selectedPerson2.Soyisim &&
+                        (selectedPerson.Eşi == selectedPerson2.İsim + selectedPerson2.Soyisim || 
+                        selectedPerson.Eşi == selectedPerson2.İsim)
                         )
                     {
-                        selectedPerson.Spouse = personList[j];
-                        personList[j].Spouse = selectedPerson;
+                        selectedPerson.Spouse = selectedPerson2;
+                        selectedPerson2.Spouse = selectedPerson;
                     }
-                    if (
-                        selectedPerson.id != personList[j].id &&
-                        selectedPerson.Soyisim == personList[j].Soyisim &&
-                        selectedPerson.BabaAdı == personList[j].İsim
+                    else if (
+                        selectedPerson.id != selectedPerson2.id &&
+                        selectedPerson.Soyisim == selectedPerson2.Soyisim &&
+                        (selectedPerson2.Eşi == selectedPerson.İsim + selectedPerson.Soyisim ||
+                        selectedPerson2.Eşi == selectedPerson.İsim)
+                        )
+                    {
+                        selectedPerson2.Spouse = selectedPerson;
+                        selectedPerson.Spouse = selectedPerson2;
+                    }
+                    else if (
+                        selectedPerson.id != selectedPerson2.id &&
+                        selectedPerson.Soyisim == selectedPerson2.Soyisim &&
+                        selectedPerson.BabaAdı == selectedPerson2.İsim
                         )
                     {
                         selectedPerson.uvey = false;
-                        selectedPerson.Baba = personList[j];
-                        personList[j].childList.Add(selectedPerson);
+                        selectedPerson.Baba = selectedPerson2;
+                        selectedPerson2.childList.Add(selectedPerson);
                     }
-                    if (
-                        selectedPerson.id != personList[j].id &&
-                        selectedPerson.Soyisim == personList[j].Soyisim &&
-                        selectedPerson.AnneAdı == personList[j].İsim
+                    else if(
+                        selectedPerson.id != selectedPerson2.id &&
+                        selectedPerson.Soyisim == selectedPerson2.Soyisim &&
+                        selectedPerson.AnneAdı == selectedPerson2.İsim
                         )
                     {
                         selectedPerson.uvey = false;
-                        selectedPerson.Anne = personList[j];
-                        personList[j].childList.Add(selectedPerson);
+                        selectedPerson.Anne = selectedPerson2;
+                        selectedPerson2.childList.Add(selectedPerson);
                     }
+                    else if (
+                        selectedPerson.id != selectedPerson2.id &&
+                        selectedPerson.Soyisim == selectedPerson2.Soyisim &&
+                        selectedPerson.İsim == selectedPerson2.AnneAdı
+                        )
+                    {
+                        selectedPerson.uvey = false;
+                        selectedPerson2.Anne = selectedPerson;
+                        selectedPerson.childList.Add(selectedPerson2);
+                    }
+                    else if (
+                        selectedPerson.id != selectedPerson2.id &&
+                        selectedPerson.Soyisim == selectedPerson2.Soyisim &&
+                        selectedPerson.İsim == selectedPerson2.BabaAdı
+                        )
+                    {
+                        selectedPerson.uvey = false;
+                        selectedPerson2.Baba = selectedPerson;
+                        selectedPerson.childList.Add(selectedPerson2);
+                    }
+                    else if (
+                        selectedPerson2.Cinsiyet=="Erkek"&&
+                        selectedPerson.id != selectedPerson2.id &&
+                        selectedPerson.Soyisim == selectedPerson2.Soyisim &&
+                        selectedPerson.KızlıkSoyismi == selectedPerson2.Soyisim
+                        )
+                    {
+                        selectedPerson.uvey = false;
+                        selectedPerson.Baba = selectedPerson2;
+                        selectedPerson2.childList.Add(selectedPerson);
+                    }
+                    else if (
+                        selectedPerson.Cinsiyet == "Kadın" &&
+                        selectedPerson.id != selectedPerson2.id &&(
+                        selectedPerson.Soyisim == selectedPerson2.Soyisim ||
+                        selectedPerson.KızlıkSoyismi == selectedPerson2.Soyisim)
+                        )
+                    {
+                        selectedPerson.uvey = false;
+                        selectedPerson.Anne = selectedPerson2;
+                        selectedPerson2.childList.Add(selectedPerson);
+                    }
+
                     /*
                     if (
                         selectedPerson.id != personList[j].id &&

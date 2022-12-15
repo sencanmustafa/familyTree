@@ -19,19 +19,19 @@ namespace Business
                 if (person.Anne != null)
                 {
                     Console.WriteLine("  |");
-                    Console.WriteLine("  +-- ANNE ->  " + person.Anne.İsim + " " + person.Anne.Soyisim);
+                    Console.WriteLine("  +-- ANNE ->  " + person.Anne.id+ " "+person.Anne.İsim + " " + person.Anne.Soyisim);
                 }
 
                 if (person.Baba != null)
                 {
                     Console.WriteLine("  |");
-                    Console.WriteLine("  +-- BABA ->  " + person.Baba.İsim + " " + person.Baba.Soyisim);
+                    Console.WriteLine("  +-- BABA ->  " + person.Baba.id + " " + person.Baba.İsim + " " + person.Baba.Soyisim);
                 }
 
                 if (person.Spouse != null) 
                 {
                     Console.WriteLine("  |");
-                    Console.WriteLine("  +--  ES -> " + person.Spouse.İsim + " " +  person.Spouse.Soyisim); ;
+                    Console.WriteLine("  +--  ES -> " + person.Spouse.id + " " + person.Spouse.İsim + " " +  person.Spouse.Soyisim); ;
                 }
 
                 if (person.childList != null)
@@ -44,12 +44,12 @@ namespace Business
                         if (child.uvey==true)
                         {
                             Console.WriteLine("      |");
-                            Console.WriteLine("      +-- " + child.İsim + " " + child.Soyisim + " " + "UVEY COCUK");
+                            Console.WriteLine("      +-- " + child.id +" "+ child.İsim + " " + child.Soyisim + " " + "UVEY COCUK");
                         }
                         else
                         {
                             Console.WriteLine("      |");
-                            Console.WriteLine("      +-- " + child.İsim + " " + child.Soyisim);
+                            Console.WriteLine("      +-- " + child.id +" "+ child.İsim + " " + child.Soyisim);
                         }
                     }
                 }

@@ -12,7 +12,7 @@ id;İsim;Soyisim;Eşi;AnneAdı;BabaAdı;KanGrubu;Meslek;MedeniHali;KızlıkSoyis
 11;Alper;Kaya;;Elif;Mustafa;0(-);Öğrenci;Bekar;;Erkek
 12;İrem;Çelik;;Defne;Ahmet;A(+);Öğrenci;Bekar;;Kadın
 13;Ali;Demir;;Eda;Ömer;0(+);;Bekar;;Erkek
-14;Uğur;Demir;Nazlı Kaya;Fatma;Bayram;B(-);Öğretmen;Evli;;Erkek
+14;Uğur;Demir;NazlıKaya;Fatma;Bayram;B(-);Öğretmen;Evli;;Erkek
 15;Furkan;Çelik;Zeynep;Feride;Yaşar;0(-);Terzi;Evli;;Erkek
 16;Zeynep;Çelik;Furkan;Hayriye;Feyzi;AB(+);Ev Hanımı;Evli;Koç;Kadın
 17;Halime;Kurt;Faruk;Zeynep;Furkan;AB(+);Ev Hanımı;Evli;Çelik;Kadın
