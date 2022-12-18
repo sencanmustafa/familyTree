@@ -14,24 +14,24 @@ namespace Business
         {
             foreach (Person person in familyTree)
             {
-                Console.WriteLine(person.id +  " " + person.İsim + " " + person.Soyisim);
+                Console.WriteLine(person.id +  " " + person.Isim + " " + person.Soyisim);
 
                 if (person.Anne != null)
                 {
                     Console.WriteLine("  |");
-                    Console.WriteLine("  +-- ANNE ->  " + person.Anne.id+ " "+person.Anne.İsim + " " + person.Anne.Soyisim);
+                    Console.WriteLine("  +-- ANNE ->  " + person.Anne.id+ " "+person.Anne.Isim + " " + person.Anne.Soyisim);
                 }
 
                 if (person.Baba != null)
                 {
                     Console.WriteLine("  |");
-                    Console.WriteLine("  +-- BABA ->  " + person.Baba.id + " " + person.Baba.İsim + " " + person.Baba.Soyisim);
+                    Console.WriteLine("  +-- BABA ->  " + person.Baba.id + " " + person.Baba.Isim + " " + person.Baba.Soyisim);
                 }
 
                 if (person.Spouse != null) 
                 {
                     Console.WriteLine("  |");
-                    Console.WriteLine("  +--  ES -> " + person.Spouse.id + " " + person.Spouse.İsim + " " +  person.Spouse.Soyisim); ;
+                    Console.WriteLine("  +--  ES -> " + person.Spouse.id + " " + person.Spouse.Isim + " " +  person.Spouse.Soyisim); ;
                 }
 
                 if (person.childList != null)
@@ -44,12 +44,31 @@ namespace Business
                         if (child.uvey==true)
                         {
                             Console.WriteLine("      |");
-                            Console.WriteLine("      +-- " + child.id +" "+ child.İsim + " " + child.Soyisim + " " + "UVEY COCUK");
+                            Console.WriteLine("      +-- " + child.id +" "+ child.Isim + " " + child.Soyisim + " " + "UVEY COCUK");
                         }
                         else
                         {
                             Console.WriteLine("      |");
-                            Console.WriteLine("      +-- " + child.id +" "+ child.İsim + " " + child.Soyisim);
+                            Console.WriteLine("      +-- " + child.id +" "+ child.Isim + " " + child.Soyisim);
+                        }
+                    }
+                }
+                if (person.kardesList != null)
+                {
+                    Console.WriteLine("  |");
+                    Console.WriteLine("  +--  Sisters And Brothers:");
+
+                    foreach (Person kardes in person.kardesList)
+                    {
+                        if (kardes.uvey == true)
+                        {
+                            Console.WriteLine("      |");
+                            Console.WriteLine("      +-- " + kardes.id + " " + kardes.Isim + " " + kardes.Soyisim + " " + "UVEY COCUK");
+                        }
+                        else
+                        {
+                            Console.WriteLine("      |");
+                            Console.WriteLine("      +-- " + kardes.id + " " + kardes.Isim + " " + kardes.Soyisim);
                         }
                     }
                 }
@@ -61,24 +80,24 @@ namespace Business
         {
             foreach (Person person in familyTree)
             {
-                Console.WriteLine(person.İsim + " " + person.Soyisim);
+                Console.WriteLine(person.Isim + " " + person.Soyisim);
 
                 if (person.Anne != null)
                 {
                     Console.WriteLine("  |");
-                    Console.WriteLine("  +-- " + person.AnneAdı );
+                    Console.WriteLine("  +-- " + person.AnneAdi );
                 }
 
                 if (person.Baba != null)
                 {
                     Console.WriteLine("  |");
-                    Console.WriteLine("  +-- " + person.BabaAdı );
+                    Console.WriteLine("  +-- " + person.BabaAdi );
                 }
 
-                if (person.Eşi != null) // Eşi listele
+                if (person.Esi != null) // Eşi listele
                 {
                     Console.WriteLine("  |");
-                    Console.WriteLine("  +-- " + person.Eşi); ;
+                    Console.WriteLine("  +-- " + person.Esi); ;
                 }
 
                 if (person.childList.Count !=0)
@@ -89,7 +108,7 @@ namespace Business
                     foreach (Person child in person.childList)
                     {
                         Console.WriteLine("      |");
-                        Console.WriteLine("      +-- " + child.İsim + " " + child.Soyisim);
+                        Console.WriteLine("      +-- " + child.Isim + " " + child.Soyisim);
                     }
                 }
 

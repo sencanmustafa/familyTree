@@ -1,0 +1,35 @@
+id;Ýsim;Soyisim;Doðum Tarihi;Eþi;Anne Adý;Baba Adý;Kan Grubu;Meslek;Medeni Hali;Kýzlýk Soyismi;Cinsiyet
+1;Emin;Kaya;2.07.1946;SenaKaya;Ayþe;Mehmet;0(-);Marangoz;Evli;;Erkek
+2;Sena;Kaya;26.01.1949;EminKaya;Hatice;Ali;A(-);Ev Hanýmý;Evli;Çetin;Kadýn
+3;Nazlý;Demir;21.02.1969;UðurDemir;Sena;Emin;A(-);Ev Hanýmý;Evli;Kaya;Kadýn
+4;Mehmet;Kaya;14.04.1971;ZeynepKýlýç;Sena;Emin;0(-);Marangoz;Evli;;Erkek
+5;Mustafa;Kaya;4.08.1973;Elif;Sena;Emin;0(-);Marangoz;Evli;;Erkek
+6;Defne;Çelik;8.07.1993;AhmetÇelik;Nazlý;Uður;AB(+);Mühendis;Evli;Demir;Kadýn
+7;Ömer;Demir;19.04.1995;Eda;Nazlý;Uður;A(+);Doktor;Evli;;Erkek
+8;Emin;Kaya;2.02.2000;;Zeynep;Mehmet;0(+);Marangoz;Bekar;;Erkek
+9;Hatice;Kaya;17.09.2003;;Zeynep;Mehmet;A(+);Öðrenci;Bekar;;Kadýn
+10;Emre;Kaya;5.04.2006;;Zeynep;Mehmet;0(+);Öðrenci;Bekar;;Erkek
+11;Alper;Kaya;10.10.2004;;Elif;Mustafa;0(-);Öðrenci;Bekar;;Erkek
+12;Ýrem;Çelik;9.09.2009;;Defne;Ahmet;A(+);Öðrenci;Bekar;;Kadýn
+13;Ali;Demir;6.08.2021;;Eda;Ömer;0(+);;Bekar;;Erkek
+14;Uður;Demir;4.07.1967;NazlýKaya;Fatma;Bayram;B(-);Öðretmen;Evli;;Erkek
+15;Furkan;Çelik;1.01.1941;Zeynep;Feride;Yaþar;0(-);Terzi;Evli;;Erkek
+16;Zeynep;Çelik;7.06.1945;Furkan;Hayriye;Feyzi;AB(+);Ev Hanýmý;Evli;Koç;Kadýn
+17;Halime;Kurt;5.05.1965;Faruk;Zeynep;Furkan;AB(+);Ev Hanýmý;Evli;Çelik;Kadýn
+18;Gül;Özkan;4.02.1968;Hasan;Zeynep;Furkan;0(+);Muhasebeci;Evli;Çelik;Kadýn
+19;Bekir;Çelik;11.10.1970;Kübra;Zeynep;Furkan;B(-);Terzi;Evli;;Erkek
+20;Semra;Aslan;10.11.1988;MahmutAslan;Halime;Faruk;B(-);Ev Hanýmý;Evli;Çelik;Kadýn
+21;Yaþar;Kurt;9.08.1990;Esra;Halime;Faruk;AB(+);Mühendis;Evli;;Erkek
+22;Orhan;Özkan;2.01.1990;Feride;Gül;Hasan;0(-);Terzi;Evli;;Erkek
+23;Necmi;Özkan;7.02.1992;Gökçe;Gül;Hasan;A(+);Polis;Evli;;Erkek
+24;Ahmet;Çelik;27.06.1992;Defne;Kübra;Bekir;B(-);Avukat;Evli;;Erkek
+25;Yusuf;Özkan;9.04.2016;;Gökçe;Necmi;0(+);;Bekar;;Erkek
+26;Furkan;Özkan;29.11.2018;;Gökçe;Necmi;A(+);;Bekar;;Erkek
+27;Merve;Özkan;10.10.2017;;Feride;Orhan;B(-);;Bekar;;Kadýn
+28;Ahmet;Kurt;8.04.2014;;Esra;Yaþar;A(+);Öðrenci;Bekar;;Erkek
+29;Almila;Kurt;14.02.2016;;Esra;Yaþar;AB(+);;Bekar;;Kadýn
+30;Yýlmaz;Aslan;17.10.2012;;Semra;Mahmut;0(-);Öðrenci;Bekar;;Erkek
+31;Mahmut;Aslan;10.10.1986;Semra;Funda;Yakup;0(+);Ýþçi;Evli;;Erkek
+30;Yýlmaz;Aslan;17.10.2012;;Semra;Mahmut;0(-);Öðrenci;Evli;;Erkek
+32;Yýldýz;Aslan;8.06.1994;;Funda;Yakup;AB(+);Öðretmen;Dul;;Kadýn
+33;Ýrem;Þimþek;4.04.2014;;Yýldýz;Ahmet;0(-);Öðrenci;Bekar;;Kadýn

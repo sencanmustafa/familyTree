@@ -5,23 +5,6 @@ namespace ConsoleUI
 {
     class Program
     {
-        public class Node
-        {
-            public int id; // Bireyin benzersiz bir kimlik numarası
-            public string ad; // Bireyin adı
-            public string soyad; // Bireyin soyadı
-            public Node eş; // Bireyin eşi (eğer varsa)
-            public Node anne; // Bireyin annesi (eğer varsa)
-            public Node baba; // Bireyin babası (eğer varsa)
-
-            // Yeni bir düğüm oluşturmak için bir yapıcı fonksiyon
-            public Node(Person person)
-            {
-                this.id = person.id;
-                this.ad = person.İsim;
-                this.soyad = person.Soyisim;
-            }
-        }
         static void Main(string[] args)
         {
             Nodes nodes = new Nodes();
@@ -30,9 +13,21 @@ namespace ConsoleUI
             List<Person> personList = new List<Person>();
             personList = readCsv.readExcelReturnPersonList();
 
+            //List<Person> personList = new List<Person>();
 
+            //var personList2 = personListOld.OrderBy(p => p.bornDate);
 
             
+            /*
+            foreach (var item in personList2)
+            {
+                personList.Add(item);
+            }
+            */
+
+           
+
+            /*
             Person AtaAnne = personList[1];
             Person AtaBaba = personList[0];
             for (int i = 2; i < personList.Count(); i++)
@@ -57,7 +52,7 @@ namespace ConsoleUI
                     }
                 }
                 
-            }
+            }     
             for (int i = 0; i < personList.Count(); i++)
             {
                 Person selectedPerson = personList[i];
@@ -147,7 +142,7 @@ namespace ConsoleUI
                         selectedPerson2.childList.Add(selectedPerson);
                     }
 
-                    /*
+                    
                     if (
                         selectedPerson.id != personList[j].id &&
                         selectedPerson.AnneAdı == personList[j].İsim
@@ -157,7 +152,7 @@ namespace ConsoleUI
                         selectedPerson.Anne = personList[j];
                         personList[j].childList.Add(selectedPerson);
                     }
-                    /*
+                    
                     if (
                         selectedPerson.id != personList[j].id &&
                         selectedPerson.BabaAdı == personList[j].İsim
@@ -167,14 +162,65 @@ namespace ConsoleUI
                         selectedPerson.Baba = personList[j];
                         personList[j].childList.Add(selectedPerson);
                     }
-                    */
+                    
 
                 }
             }
             
+            */
+
+
+
+            foreach (var person in personList)
+            {
+                foreach (var otherPerson in personList)
+                {
+                    if (person.id == otherPerson.id)
+                    {
+                        continue;
+                    }
+
+                    if ((person.MedeniHali=="Evli" && otherPerson.MedeniHali=="Evli")&&(person.Esi == otherPerson.Isim+otherPerson.Soyisim))
+                    {
+                        person.Spouse = otherPerson;
+                        
+                    }
+                    if ((person.MedeniHali == "Evli" && otherPerson.MedeniHali == "Evli") &&(person.KizlikSoyismi == otherPerson.Soyisim) &&(person.bornDate<otherPerson.bornDate))
+                    {
+                        person.childList.Add(otherPerson);
+                        otherPerson.Anne = person;
+                        if (person.Spouse!=null)
+                        {
+                            person.Spouse.childList.Add(otherPerson);
+                        }
+                    }
+                    if ((person.Soyisim == otherPerson.Soyisim || person.Soyisim==otherPerson.KizlikSoyismi || person.KizlikSoyismi ==otherPerson.Soyisim) && (person.bornDate<otherPerson.bornDate)&&(otherPerson.BabaAdi == person.Isim))
+                    {
+                        person.childList.Add(otherPerson);
+                        if (person.Spouse!=null)
+                        {
+                            person.Spouse.childList.Add(otherPerson);
+                        }
+                        otherPerson.Anne = person.Spouse;
+                        otherPerson.Baba = person;
+                    }
+                    if (person.AnneAdi == otherPerson.AnneAdi && person.BabaAdi == otherPerson.BabaAdi)
+                    {
+                        person.kardesList.Add(otherPerson);
+                        
+                    }
+
+
+
+
+
+                }
+            }     
+                 
+
 
             nodes.PrintFamilyTree(personList);
-         
+
         }
     }
 }

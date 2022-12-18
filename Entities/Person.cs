@@ -11,16 +11,18 @@ public class Person
 {
     public int id { get; set; }
 
-    public string? İsim { get; set; }
+    public string? Isim { get; set; }
 
     public string? Soyisim { get; set; }
 
+    public string? DogumTarihiOld { get; set; }
+    public DateOnly? bornDate { get; set; }
 
-    public string? Eşi { get; set; }
+    public string? Esi { get; set; }
 
-    public string? AnneAdı { get; set; }
+    public string? AnneAdi { get; set; }
 
-    public string? BabaAdı { get; set; }
+    public string? BabaAdi { get; set; }
 
     public string? KanGrubu { get; set; }
 
@@ -29,7 +31,7 @@ public class Person
 
     public string? MedeniHali { get; set; }
 
-    public string? KızlıkSoyismi { get; set; }
+    public string? KizlikSoyismi { get; set; }
 
     public string? Cinsiyet { get; set; }
     public bool? uvey { get; set; }
@@ -39,9 +41,11 @@ public class Person
     public Person? Anne { get; set; }
     public Person? Baba { get; set; }
     public Person? Spouse { get; set; }   
+    public List<Person>? kardesList { get; set; }
     public Person()
     {
         this.childList = new List<Person>();
+        this.kardesList = new List<Person>();
         
     }
 }

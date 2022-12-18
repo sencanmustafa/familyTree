@@ -53,6 +53,11 @@ namespace Business
             //var records = csvReader.GetRecords<Person2>().ToList();
 
             Console.WriteLine("READED");
+            foreach (var item in personList)
+            {
+                item.bornDate = DateOnly.Parse(item.DogumTarihiOld);
+            }
+            
             return personList;
         }
     }
