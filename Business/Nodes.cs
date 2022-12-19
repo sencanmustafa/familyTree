@@ -121,11 +121,33 @@ namespace Business
             }
         }
 
+        public void printProblem5(List<Person> personList) 
+        {
+            List<int> idList = new List<int>();
+            foreach (var person in personList)
+            {
+                if (idList.Contains(person.id))
+                {
+                    continue;
+                }
+                int age = DateTime.Now.Year-person.bornDate.Value.Year;
+                Console.WriteLine(person.Isim + " " + age);
+                idList.Add(person.id);
+                Console.WriteLine();
+                
 
+            }
+        }
         public List<Person> buildFamilyTree(List<Person> personList)
         {
             //List<Person> personList = new List<Person>();
             //personList2 = personList;
+            List<String> names = new List<String>();
+            foreach (var item in personList)
+            {
+                names.Add(item.Isim);
+                names.Add(item.Isim + item.Soyisim);
+            }
             foreach (var person in personList)
             {
                 foreach (var otherPerson in personList)
@@ -134,7 +156,18 @@ namespace Business
                     {
                         continue;
                     }
-
+                    if (otherPerson.MedeniHali =="Evli")
+                    {
+                        if (!(names.Contains(otherPerson.Esi)))
+                        {
+                            Person temp = new Person();
+                            Random rnd = new Random();
+                            int number = rnd.Next(100, 10000);
+                            temp.id = number;
+                            temp.Isim = otherPerson.Esi;
+                            otherPerson.Spouse = temp;
+                        }
+                    }
                     if ((person.MedeniHali == "Evli" && otherPerson.MedeniHali == "Evli") && (person.Esi == otherPerson.Isim + otherPerson.Soyisim))
                     {
                         person.Spouse = otherPerson;
@@ -142,42 +175,71 @@ namespace Business
                     }
                     if ((person.MedeniHali == "Evli" && otherPerson.MedeniHali == "Evli") && (person.KizlikSoyismi == otherPerson.Soyisim) && (person.bornDate < otherPerson.bornDate))
                     {
-                        person.childList.Add(otherPerson);
-                        otherPerson.Anne = person;
+                        
                         if (person.Spouse != null)
                         {
+                            
+                            person.childList.Add(otherPerson);
+                            otherPerson.Anne = person;
                             person.Spouse.childList.Add(otherPerson);
+                            
+                            
+                        }
+                    }
+                    if ((person.KizlikSoyismi == otherPerson.Soyisim) && (person.bornDate < otherPerson.bornDate))
+                    {
+
+                        if (person.Spouse != null)
+                        {
+                           
+                             person.childList.Add(otherPerson);
+                             otherPerson.Anne = person;
+                             person.Spouse.childList.Add(otherPerson);
+                            
+
                         }
                     }
                     if ((person.Soyisim == otherPerson.Soyisim || person.Soyisim == otherPerson.KizlikSoyismi || person.KizlikSoyismi == otherPerson.Soyisim) && (person.bornDate < otherPerson.bornDate) && (otherPerson.BabaAdi == person.Isim))
                     {
-                        person.childList.Add(otherPerson);
+    
                         if (person.Spouse != null)
                         {
+                            
+                            person.childList.Add(otherPerson);
                             person.Spouse.childList.Add(otherPerson);
+                            otherPerson.Anne = person.Spouse;
+                            otherPerson.Baba = person;
+                            
+                            
                         }
-                        otherPerson.Anne = person.Spouse;
-                        otherPerson.Baba = person;
+                        
                     }
+                    
                     if (person.AnneAdi == otherPerson.AnneAdi && person.BabaAdi == otherPerson.BabaAdi)
                     {
                         person.kardesList.Add(otherPerson);
-
                     }
                     if (otherPerson.Anne!=null)
                     {
                         if (person.Isim + person.Soyisim == otherPerson.Anne.AnneAdi || person.Isim == otherPerson.Anne.AnneAdi)
                         {
-                            person.torunList.Add(otherPerson);
-                            otherPerson.ataList.Add(person);
+                            if (person.bornDate<otherPerson.bornDate)
+                            {
+                                person.torunList.Add(otherPerson);
+                                otherPerson.ataList.Add(person);
+                            }
+                            
                         }
                     }
                     if (otherPerson.Baba != null)
                     {
                         if (person.Isim + person.Soyisim == otherPerson.Baba.BabaAdi || person.Isim == otherPerson.Baba.BabaAdi)
                         {
-                            person.torunList.Add(otherPerson);
-                            otherPerson.ataList.Add(person);
+                            if (person.bornDate < otherPerson.bornDate)
+                            {
+                                person.torunList.Add(otherPerson);
+                                otherPerson.ataList.Add(person);
+                            }
                         }
                     }
                     /*
@@ -209,8 +271,38 @@ namespace Business
 
             return personList;
         }
+        
+        public int findLenghtFatherFamilyTree(Person person , int x) 
+        {
 
+            if (person.Baba!=null)
+            {
+                x++;
+                findLenghtFatherFamilyTree(person.Baba,x);
+            }
+            return x;
+            
+        }
+        public int findLenghtMotherFamilyTree(Person person, int x)
+        {
 
+            if (person.Anne != null)
+            {
+                x++;
+                findLenghtMotherFamilyTree(person.Anne, x);
+            }
+            return x;
+
+        }
+
+        public void printProblem1(List<Person> personList)
+        {
+            Nodes nodes = new Nodes();
+            List<Person> sortedList = new List<Person>();
+            sortedList = personList;
+            sortedList.OrderBy(p => p.bornDate);
+            nodes.PrintFamilyTree(sortedList);
+        }
     }
 }
 

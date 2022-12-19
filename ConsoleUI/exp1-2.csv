@@ -1,5 +1,5 @@
-id;İsim;Soyisim;DogumTarihi;Eşi;AnneAdı;BabaAdı;KanGrubu;Meslek;MedeniHali;KızlıkSoyismi;Cinsiyet
-1;Emin;Kaya;2.07.1946;SenaKaya;Ayşe;Mehmet;0(-);Marangoz;Evli;;Erkek
+id;İsim;Soyisim;Doğum Tarihi;Eşi;Anne Adı;Baba Adı;Kan Grubu;Meslek;Medeni Hali;Kızlık Soyismi;Cinsiyet
+1;Emin;Kaya;02/07/1946;SenaKaya;Ayşe;Mehmet;0(-);Marangoz;Evli;;Erkek
 2;Sena;Kaya;26.01.1949;EminKaya;Hatice;Ali;A(-);Ev Hanımı;Evli;Çetin;Kadın
 3;Nazlı;Demir;21.02.1969;UğurDemir;Sena;Emin;A(-);Ev Hanımı;Evli;Kaya;Kadın
 4;Mehmet;Kaya;14.04.1971;ZeynepKılıç;Sena;Emin;0(-);Marangoz;Evli;;Erkek

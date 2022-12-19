@@ -1,8 +1,3 @@
-using System.Linq;
-using CsvHelper;
-using CsvHelper.Configuration;
-using CsvHelper.Configuration.Attributes;
-using System.Globalization;
 namespace Entities;
 
 
@@ -19,7 +14,7 @@ public class Person
     public DateOnly? bornDate { get; set; }
 
     public string? Esi { get; set; }
-    //public string? EsId { get; set; }
+    public string? EsId { get; set; }
 
     public string? AnneAdi { get; set; }
 
