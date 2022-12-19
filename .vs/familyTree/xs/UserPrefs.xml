@@ -1,20 +1,19 @@
 ﻿<Properties StartupConfiguration="{12906426-11E3-4F86-BCCE-56AC73BDB020}|Default">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ConsoleUI/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Business/ReadCsv.cs">
     <Files>
-      <File FileName="ConsoleUI/Program.cs" Line="53" Column="2" />
-      <File FileName="Business/Nodes.cs" Line="9" Column="1" />
+      <File FileName="Entities/Person.cs" Line="22" Column="7" />
+      <File FileName="ConsoleUI/Program.cs" Line="1" Column="1" />
+      <File FileName="Business/ReadCsv.cs" Line="38" Column="57" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="familyTree" expanded="True">
-            <Node name="Business" expanded="True" />
-            <Node name="ConsoleUI" expanded="True">
-              <Node name="Program.cs" selected="True" />
+            <Node name="Business" expanded="True">
+              <Node name="ReadCsv.cs" selected="True" />
             </Node>
+            <Node name="ConsoleUI" expanded="True" />
             <Node name="Entities" expanded="True" />
           </Node>
         </State>
@@ -25,7 +24,9 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.ConsoleUI PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
 </Properties>

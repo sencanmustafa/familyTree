@@ -18,8 +18,8 @@ namespace Business
             {
                 Delimiter = ";"
             };
-            //string csvFilePath = "/Users/mustafasencan/Desktop/software/familyTree/familiyTree/ConsoleUI/exp1-2.csv";
-            string csvFilePath = @"C:\Users\pc\Masaüstü\Software\farmilyTree\ConsoleUI\exp1-2.csv";
+            string csvFilePath = "/Users/mustafasencan/Desktop/software/farmilyTree/ConsoleUI/exp1-3.csv";
+            //string csvFilePath = @"C:\Users\pc\Masaüstü\Software\farmilyTree\ConsoleUI\exp1-2.csv";
             //var streamReader = new StreamReader(csvFilePath);
 
             //var csvReader = new CsvReader(streamReader, CultureInfo.InvariantCulture,);

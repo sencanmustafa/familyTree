@@ -12,6 +12,7 @@ namespace Entities
             Map(m => m.Soyisim).Name("Soyisim");
             Map(m => m.DogumTarihiOld).Name("DogumTarihi");
             Map(m => m.Esi).Name("Eşi");
+            //Map(m => m.EsId).Name("EsId");
             Map(m => m.AnneAdi).Name("AnneAdı");
             Map(m => m.BabaAdi).Name("BabaAdı");
             Map(m => m.KanGrubu).Name("KanGrubu");

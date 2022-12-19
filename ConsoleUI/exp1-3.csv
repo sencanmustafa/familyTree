@@ -1,0 +1,35 @@
+id;İsim;Soyisim;DogumTarihi;Eşi;AnneAdı;BabaAdı;KanGrubu;Meslek;MedeniHali;KızlıkSoyismi;Cinsiyet
+1;Emin;Kaya;07.01.1946;SenaKaya;Ayşe;Mehmet;0(-);Marangoz;Evli;;Erkek
+2;Sena;Kaya;01.26.1949;EminKaya;Hatice;Ali;A(-);Ev Hanımı;Evli;Çetin;Kadın
+3;Nazlı;Demir;02.21.1969;UğurDemir;Sena;Emin;A(-);Ev Hanımı;Evli;Kaya;Kadın
+4;Mehmet;Kaya;04.12.1971;ZeynepKılıç;Sena;Emin;0(-);Marangoz;Evli;;Erkek
+5;Mustafa;Kaya;08.04.1973;Elif;Sena;Emin;0(-);Marangoz;Evli;;Erkek
+6;Defne;Çelik;8.07.1993;AhmetÇelik;Nazlı;Uğur;AB(+);Mühendis;Evli;Demir;Kadın
+7;Ömer;Demir;04.19.1995;Eda;Nazlı;Uğur;A(+);Doktor;Evli;;Erkek
+8;Emin;Kaya;02.02.2000;;Zeynep;Mehmet;0(+);Marangoz;Bekar;;Erkek
+9;Hatice;Kaya;09.17.2003;;Zeynep;Mehmet;A(+);Öğrenci;Bekar;;Kadın
+10;Emre;Kaya;04.05.2006;;Zeynep;Mehmet;0(+);Öğrenci;Bekar;;Erkek
+11;Alper;Kaya;10.10.2004;;Elif;Mustafa;0(-);Öğrenci;Bekar;;Erkek
+12;İrem;Çelik;09.09.2009;;Defne;Ahmet;A(+);Öğrenci;Bekar;;Kadın
+13;Ali;Demir;08.06.2021;;Eda;Ömer;0(+);;Bekar;;Erkek
+14;Uğur;Demir;07.04.1967;NazlıKaya;Fatma;Bayram;B(-);Öğretmen;Evli;;Erkek
+15;Furkan;Çelik;01.01.1941;Zeynep;Feride;Yaşar;0(-);Terzi;Evli;;Erkek
+16;Zeynep;Çelik;06.07.1945;Furkan;Hayriye;Feyzi;AB(+);Ev Hanımı;Evli;Koç;Kadın
+17;Halime;Kurt;05.05.1965;Faruk;Zeynep;Furkan;AB(+);Ev Hanımı;Evli;Çelik;Kadın
+18;Gül;Özkan;04.04.1968;Hasan;Zeynep;Furkan;0(+);Muhasebeci;Evli;Çelik;Kadın
+19;Bekir;Çelik;10.11.1970;Kübra;Zeynep;Furkan;B(-);Terzi;Evli;;Erkek
+20;Semra;Aslan;11.10.1988;MahmutAslan;Halime;Faruk;B(-);Ev Hanımı;Evli;Çelik;Kadın
+21;Yaşar;Kurt;08.09.1990;Esra;Halime;Faruk;AB(+);Mühendis;Evli;;Erkek
+22;Orhan;Özkan;01.02.1990;Feride;Gül;Hasan;0(-);Terzi;Evli;;Erkek
+23;Necmi;Özkan;02.07.1992;Gökçe;Gül;Hasan;A(+);Polis;Evli;;Erkek
+24;Ahmet;Çelik;02.27.1992;Defne;Kübra;Bekir;B(-);Avukat;Evli;;Erkek
+25;Yusuf;Özkan;04.07.2016;;Gökçe;Necmi;0(+);;Bekar;;Erkek
+26;Furkan;Özkan;11.29.2018;;Gökçe;Necmi;A(+);;Bekar;;Erkek
+27;Merve;Özkan;10.10.2017;;Feride;Orhan;B(-);;Bekar;;Kadın
+28;Ahmet;Kurt;04.08.2014;;Esra;Yaşar;A(+);Öğrenci;Bekar;;Erkek
+29;Almila;Kurt;02.12.2016;;Esra;Yaşar;AB(+);;Bekar;;Kadın
+30;Yılmaz;Aslan;10.17.2012;;Semra;Mahmut;0(-);Öğrenci;Bekar;;Erkek
+31;Mahmut;Aslan;10.10.1986;Semra;Funda;Yakup;0(+);İşçi;Evli;;Erkek
+32;Yıldız;Aslan;06.08.1994;;Funda;Yakup;AB(+);Öğretmen;Dul;;Kadın
+33;İrem;Şimşek;04.04.2014;;Yıldız;Ahmet;0(-);Öğrenci;Bekar;;Kadın
+

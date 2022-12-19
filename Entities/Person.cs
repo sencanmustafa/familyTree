@@ -19,13 +19,13 @@ public class Person
     public DateOnly? bornDate { get; set; }
 
     public string? Esi { get; set; }
+    //public string? EsId { get; set; }
 
     public string? AnneAdi { get; set; }
 
     public string? BabaAdi { get; set; }
 
     public string? KanGrubu { get; set; }
-
 
     public string? Meslek { get; set; }
 
@@ -42,10 +42,14 @@ public class Person
     public Person? Baba { get; set; }
     public Person? Spouse { get; set; }   
     public List<Person>? kardesList { get; set; }
+    public List<Person>? torunList { get; set; }
+    public List<Person>? ataList { get; set; }
     public Person()
     {
         this.childList = new List<Person>();
         this.kardesList = new List<Person>();
-        
+        this.torunList = new List<Person>();
+        this.ataList = new List<Person>();
+
     }
 }
